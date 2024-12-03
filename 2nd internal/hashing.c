@@ -1,7 +1,9 @@
 #include <stdio.h> 
 #include <stdlib.h> 
 #include <string.h> 
-const int TABLE_SIZE = 128; 
+const int TABLE_SIZE = 128;
+char key[100]; 
+char value[100];
  
 struct entry { 
     char key[100]; 
@@ -59,8 +61,6 @@ char *get(char *key) {
  
 } 
  
- 
- 
 int removeFromDict(char *key) { 
  int index = hashf(key); 
     int start = index; 
@@ -77,9 +77,8 @@ int removeFromDict(char *key) {
         table[index] = NULL; // Set the pointer to NULL after freeing the memory 
         return 1; 
     } 
-} 
-char key[100]; 
-char value[100]; 
+}
+
 int main() { 
     int choice; 
     while (1) { 
