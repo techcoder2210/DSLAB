@@ -2,7 +2,7 @@
 #include<stdlib.h>
 int a[50][50], n, visited[50];
 int q[20], front = -1,rear = -1;
-int s[20], top = -1, count=0;
+int s[20], top = -1;
 
 void bfs(int v){
 	int i, cur;
