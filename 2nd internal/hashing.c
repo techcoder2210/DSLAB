@@ -38,7 +38,7 @@ void put(char *key, char *value) {
         index = (index + 1) % TABLE_SIZE; 
         if (index == start) { 
             printf("Dictionary is full.\n"); 
-            return; // Added return to exit the function if the dictionary is full 
+            return;
         } 
     } 
     table[index] = createNode(key, value); 
@@ -57,7 +57,6 @@ char *get(char *key) {
         return NULL; 
     else 
         return table[index]->value; 
- 
 } 
  
 int removeFromDict(char *key) { 
