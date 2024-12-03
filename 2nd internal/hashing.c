@@ -42,7 +42,6 @@ void put(char *key, char *value) {
         } 
     } 
     table[index] = createNode(key, value); 
- 
 } 
  
 char *get(char *key) { 
